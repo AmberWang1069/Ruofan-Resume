@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:36px;
+    text-align: center;
+    color: antiquewhite;
+}
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: rgb(94, 55, 4);
+    text-align: center;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(71, 42, 3);
+    text-align: center;
+}
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(71, 42, 3);
+    background-color: #f6efe9;
+}
+header {
+    background-color: rgb(67, 124, 134);
+}
+
+section{
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+#about  {background-color: rgb(101, 151, 159);}
+#school  {background-color: rgb(130, 169, 175);}
+#work, ul, li, ol {background-color: rgb(152, 197, 204);}
+#hobbies  {background-color: rgb(177, 220, 226);}
+#contact  {background-color: rgb(206, 229, 232);}
+#about blockquote{
+    max-width: 700px;
+    margin: 15px auto;
+    font-style: italic;
+}
+/*Navigation Styling*/
+header nav ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+header nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color:antiquewhite;
+    padding: 6px 10px;
+}
+header nav ul li a:hover{
+    color:darkgrey;
+}
+/*Work experience form styling*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th,td{
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+th{
+    background-color: #dddddd;
+    font-weight: bold;
+    text-align: center;
+}
+/*Contact form styling*/
+form div{
+    margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],input[type="email"],input[type="tel"],textarea, select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-button{
+    background-color: darkslategrey;
+    color:antiquewhite;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.photo{
+    width: 280px; 
+    height: 420px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid darkslategrey;
+
+}

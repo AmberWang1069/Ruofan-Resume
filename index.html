@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruofan Wang - portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Projects" href="flexbox-projects.html">
+    <link rel="Gallery" href="grid-gallery.html">
+    <lind rel="Resume" href="bootstrap-resume.html">
+</head>
+<body>
+    <header>
+        <h1>Ruofan Wang</h1>
+        <nav>
+            <ul>               
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#school">School Life</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>                
+            </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flexbox-projects.html">Projects</a></li>
+                <li><a href="grid-gallery.html">Gallery</a></li>
+                <li><a href="bootstrap-resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2 class="section-title">About me</h2>
+            <p>Welcome to know me! I'm a student in Computer Engineering, but with <em>Hospitality</em> and <em>Liguistics</em> background.<br>
+            My hometown is China, but I spent few years in <em>Australia</em> and now <em>Canada</em>. I'm willing to explore more countries if I can.<br>
+            <blockquote>"...for if he has lived sincerely, it must have been in a distant land to me." -- Henry David Thoreau</blockquote>
+            <p>This line describe my life perfectly. I'm totally <strong>ME</strong> when I'm in a distant land to hometown.</p>
+            <img class = "photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Walden_Thoreau.jpg/800px-Walden_Thoreau.jpg" alt="Picture of the book">
+            
+            </p>
+
+    </section>
+
+    <section id="school">
+        <h2 class="section-title">School Life</h2>
+        <table>
+            <th>Education Experience</th>
+            <tr>
+                <td>Computer Engineering Technology-Computing Science</td>
+                <td>Algonquin College, Ottawa, ON</td>
+                <td>Jan 2025 - Feb 2028</td>
+            </tr>
+            <tr>               
+                <td>Master of International Tourism and Hotel Management</td>
+                <td>The Hotel School Sydney, Australia</td>
+                <td>2016 - 2018</td>
+            </tr>
+            <tr>
+                <td>Bachelor of English and Applied Linguistics</td>.
+                <td>The Nottingham, Ningbo, China</td>
+                <td>2012 - 2016</td>
+            </tr>
+        </table>
+    </section>
+
+
+
+    <section id="work">
+        <h2 class="section-title">Work Experience</h2>
+        <ol>
+            <li>Revenue Analyst - Marriott Revenue Strategy Qingdao Office, China (Aug 2021 - Dec 2024)</li>
+            <ul>
+                <li>Monitored Revenue Management System pricing outputs against feature signals (competitor rates, demand/supply, seasonality)</li>
+                <li>Identified data and concept drift and applied Human-in-the-loop overrides to maintain accuracy and align with real market situation</li>
+                <li>Collected competitor daily room rates as external features and prepared segmented booking data by channel, market, room type, promotions, and holiday periods, structuring them as input signals to analyze demand patterns and identify gaps against forecast baselines.</li>
+                <li>Automated daily reporting workflow with Microsoft Power Automate</li>
+                <li>Built PivotTable dashboards to visualize data and support explainable decision-making</li>
+            </ul>
+            <li>Restaurant Reservation Agent - The Ritz-Carlton Tinajin, China (Aug 2018 - July 2021)</li>
+        </ol>
+    </section>
+
+
+    <section id="hobbies">
+        <h2 class="section-title">Hobbies and Interests</h2>
+        <ul> 
+            <li>Fitness</li>
+            To keep fit and health. Also help me to clear head.
+            <li>Music</li>
+            <li>Coffee</li>
+            <li>Photography<br>
+            To record and catch the moment in life.</li>     
+            <video width="360" height="640" controls>
+                <source src="images/vedio.mp4" type="video/mp4">
+            </video>
+        </ul>
+    </section>
+
+
+    <section id="contact">
+        <h2 class="section-title">Contact Form</h2>
+        <form action="/submitform" method="post">
+           <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required>
+            </div>
+
+            <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required>
+            </div>
+
+            <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="user_phone" required>
+            </div>
+
+            <div>
+            <label for="contact_method">Prefered contact method:</label>
+            <select id="contact_method" name="contact_method">
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+            </select>
+            </div>
+            
+            <div>
+            <label for="reason">Reason for contact:</label>
+            <select id="reason" name="reason">
+                <option value="job">Job opportunity</option>
+                <option value="collaboration">collaboration</option>
+                <option value="inquiry">General Inquiry</option>
+            </select>
+            </div>
+
+            <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <button type="submit" class="form-button">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Phone: (613) 862-8528 | Email: wang1069@algonquinlive.com</p>
+        <p><a href="https://github.com/AmberWang1069?tab=repositories">Github</a></p>
+    </footer>
+
+</body>
+</html>
