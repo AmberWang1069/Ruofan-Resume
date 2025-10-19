@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+        <h1>Ruofan Wang</h1>
+        <nav>
+            <ul>               
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#school">School Life</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>                
+            </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flexbox-projects.html">Projects</a></li>
+                <li><a href="grid-gallery.html">Gallery</a></li>
+                <li><a href="bootstrap-resume.html">Resume</a></li>
+                <li><a href="interactive.html">Interactive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="interactive-features">
+            <div style="text-align: center; margin-bottom: 10px;">
+                <h2 class="section-title">Interactive Features</h2>
+                <div id="welcome-message"></div>
+                <button id="greet-btn">Click to Greet Me</button>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 10px;">
+                <button id="theme-btn" class="interactive-button">Toggle Dark Theme</button>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 10px;">
+                <h3>Button Click Counter</h3>
+                <p id="click-count-display">Clicks: 0</p>
+                <button id="click-counter-btn">Click Me!</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 10px; border-top: 1px solid #ddd; padding-top: 20px;">
+                <h3>Current Date and Time</h3>
+                <p id="date-time-display">Loading...</p>
+            </div>
+
+            <div>
+                <h3 style="text-align: center; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">Background Color Changer</h3>
+                <div style="text-align: center; margin-top: 10px;">
+                    <button id="change-color-btn">Change Background Color</button>
+                    <div id="color-box" style="width: 200px; height: 200px; background: lightblue;"></div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+                <h3>My Skills</h3>
+                <ul id="skills-list" style="list-style-type: none;margin-top: 10px;"></ul>
+                <input type="search" id="skills-search" placeholder="Search skills...">
+                <button id="search-btn" style="margin-top: 10px;margin-bottom: 20px;">Search</button>
+                <ul id="search-results" style="margin-bottom: 20px;"></ul>
+                
+                <h3>Hobbies</h3>
+                <ul id="hobbies-list" style="list-style-type: none; padding: 0;margin-top: 10px;"></ul>
+                
+            
+            </div>
+
+        </section>
+    </main>
+    
+    <footer>
+        <p>Phone: (613) 862-8528 | Email: wang1069@algonquinlive.com</p>
+        <p><a href="https://github.com/AmberWang1069?tab=repositories">Github</a></p>
+    </footer>
+    
+    <script defer src="script.js"></script>
+</body>
+</html>

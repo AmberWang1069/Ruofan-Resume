@@ -117,5 +117,112 @@ input[type="text"],input[type="email"],input[type="tel"],textarea, select{
     margin: 20px auto;
     border-radius: 50%;
     border: 3px solid darkslategrey;
+}
+.progress{
+    overflow: visible;
+}
+.progress .progress-bar{
+    white-space: nowrap;
+    overflow: visible;
+    color: #000;
+    padding: 0.25rem 0.5rem;
+}
 
+
+#interactive-features {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+#interactive-features button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    color: antiquewhite;
+    cursor: pointer;
+}
+#interactive-features button:hover {
+    background-color: slategray;
+}
+#click-count-display {
+    font-size: 18px;
+    font-weight: bold;
+}
+#date-time-display {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#color-box {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #000;
+    background-color: lightgray;
+    transition: background-color 0.3s ease;
+}
+#skills-list{
+    list-style: none;
+    padding: 0;
+    margin:0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+/* Dark theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e6e6e6;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme p,
+body.dark-theme label {
+    color: #e6e6e6;
+}
+
+body.dark-theme section {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="tel"],
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: #262626;
+    color: #e6e6e6;
+    border: 1px solid #444;
+}
+
+body.dark-theme .form-button,
+body.dark-theme #theme-btn {
+    background-color: #2d2d2d;
+    color: #e6e6e6;
+    border: 1px solid #444;
+    box-shadow: none;
+}
+
+body.dark-theme .photo {
+    border-color: #444;
+    filter: grayscale(0.05) contrast(0.95);
+}
+
+/* optional: visible focus outline in dark theme */
+body.dark-theme :focus {
+    outline: 2px solid rgba(52,152,219,0.6);
+    outline-offset: 2px;
 }
