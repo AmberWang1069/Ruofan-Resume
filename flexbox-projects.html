@@ -3,57 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruofan Wang - Projects</title>
+    <title>Ruofan Wang — Projects</title>
+    <meta name="description" content="Projects by Ruofan Wang — personal, school, and work projects with brief summaries and links.">
+    <link rel="canonical" href="flexbox-projects.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="flexbox.css">
+    
 </head>
 <body>
     <header>
         <h1>Ruofan Wang</h1>
         <nav>
-            <ul>               
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#school">School Life</a></li>
-                <li><a href="#work">Work Experience</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>                
-            </ul>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="flexbox-projects.html">Projects</a></li>
+                <li><a href="flexbox-projects.html" aria-current="page">Projects</a></li>
                 <li><a href="grid-gallery.html">Gallery</a></li>
                 <li><a href="bootstrap-resume.html">Resume</a></li>
-                <li><a href="interactive.html">Interactive</a></li>
+                <li><button type="button" class="button-link theme-toggle" id="theme-toggle" data-theme-toggle aria-label="Toggle theme"><span class="icon" aria-hidden="true"></span></button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="Projects">
+        <section id="projects">
             <h2>My Projects</h2>
+            <p class="filters">Filter: <a href="#all">All</a> | <a href="#personal">Personal</a> | <a href="#school">School</a> | <a href="#work">Work</a></p>
                 <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Database Management System for Sales</h3>
-                        <span class="project-type school">School project</span>
-                        <p>Designed relational database schema for order & product management application.</p>
-                        <p class="technologies">Technologies Used: MySQL, PostgreSQL</p>
-                        <a href="#" target="bland" class="project-button">View Project</a>
-                    </div>
+                        <div class="project-card" id="project-llm-to-notes">
+                            <h3>LLM to Notes — Chrome Built-in AI Extension</h3>
+                            <span class="project-type personal">Personal Project (Oct 2025)</span>
+                            <p>Chrome extension for the Google Chrome Built-in AI Challenge 2025 that summarizes and translates ChatGPT/Gemini conversations entirely on-device. Uses Chrome’s Built-in AI APIs for local summarization, translation, and language detection, with a 3-layer extraction pipeline for clean parsing and structured notes (Key Points, Actions, Decisions).</p>
+                            <p class="technologies">Technologies Used: TypeScript · React (WXT) · Chrome MV3 APIs · On-device AI</p>
+                            <a href="https://github.com/AmberWang1069?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-button">View Repository</a>
+                            <a href="https://youtu.be/ykYEgIdlQDk?si=sRMfO-sU1tipNrfB" target="_blank" rel="noopener noreferrer" class="project-button" style="margin-left:8px;">Watch Demo</a>
+                        </div>
 
-                    <div class="project-card">
-                        <h3>Revenue Management</h3>
-                        <span class="project-type work">Work project</span>
-                        <p>Monitored Revenue Management System pricing outputs against feature signals (competitor rates, demand/supply, seasonality) </p>
-                        <p class="technologies">Technologies Used: Excel, Revenue Management System</p>
-                        <a href="#" target="bland" class="project-button">View Project</a>
-                    </div>
+                        <div class="project-card" id="project-employee-api">
+                            <h3>Employee Management System Backend</h3>
+                            <span class="project-type personal">Personal project</span>
+                            <p>Built RESTful API with Spring Boot and Hibernate, implementing full CRUD operations for employee data. </p>
+                            <p class="technologies">Technologies Used: Spring Boot</p>
+                            <a href="https://github.com/AmberWang1069?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-button">View Repository</a>
+                        </div>
 
-                    <div class="project-card">
-                        <h3>Employee Management System Backend</h3>
-                        <span class="project-type Personal">Personal project</span>
-                        <p>Built RESTful API with Spring Boot and Hibernate, implementing full CRUD operations for employee data. </p>
-                        <p class="technologies">Technologies Used: Spring Boot</p>
-                        <a href="#" target="bland" class="project-button">View Project</a>
-                    </div>
+                        <div class="project-card" id="project-sales-db">
+                            <h3>Database Management System for Sales</h3>
+                            <span class="project-type school">School project</span>
+                            <p>Designed relational database schema for order & product management application.</p>
+                            <p class="technologies">Technologies Used: MySQL, PostgreSQL</p>
+                        </div>
+
+                        <div class="project-card" id="project-revenue">
+                            <h3>Revenue Management</h3>
+                            <span class="project-type work">Work project</span>
+                            <p>Monitored Revenue Management System pricing outputs against feature signals (competitor rates, demand/supply, seasonality) </p>
+                            <p class="technologies">Technologies Used: Excel, Revenue Management System</p>
+                        </div>
                 </div>
 
         </section>
@@ -62,5 +69,6 @@
         <p>Phone: (613) 862-8528 | Email: wang1069@algonquinlive.com</p>
         <p><a href="https://github.com/AmberWang1069?tab=repositories">Github</a></p>
     </footer>
+    <script defer src="script.js"></script>
 </body>
 </html>
