@@ -58,14 +58,15 @@
                                 <h6>Programming Languages</h6>
                                 <!-- label color classes -->
                                 <span class="label bg-info me-1 mb-1">Java</span>
-                                <span class="label bg-info text-dark me-1 mb-1">SQL</span>
+                                <span class="label bg-info me-1 mb-1">SQL</span>
                                 <span class="label bg-info me-1 mb-1">C</span>
-                                <span class="label bg-info text-dark me-1 mb-1">JavaScript</span>
+                                <span class="label bg-info me-1 mb-1">JavaScript</span>
                             </div>
 
                             <div class="mb-3">
                                 <h6>Frameworks & Architecture</h6>
                                 <span class="label bg-primary me-1 mb-1">Spring Boot</span>
+                                <span class="label bg-primary me-1 mb-1">React</span>
                                 <span class="label bg-primary me-1 mb-1">RESTful APIs</span>
                                 <span class="label bg-primary me-1 mb-1">JPA / Hibernate</span>
                                 <span class="label bg-primary me-1 mb-1">Layered Architecture</span>
@@ -80,9 +81,13 @@
                             </div>
                             
                             <h6 class="mt-3">Data & Networking</h6>
-                            <div class="progress mb-2">
-                                <!-- progress-bar automatically uses bg-primary (default blue) -->
-                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100">Foundations in Data & AI</div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div id="progress-data-ai" class="progress-label me-3">Foundations in Data &amp; AI</div>
+                                <div class="progress flex-grow-1 me-2" style="background:#e9ecef; border:1px solid var(--color-border); border-radius:0.35rem; overflow:hidden;">
+                                    <!-- progress-bar automatically uses bg-primary (default blue) -->
+                                    <div class="progress-bar" role="progressbar" style="width: 35%;" aria-labelledby="progress-data-ai" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="small progress-value" aria-hidden="false">35%</div>
                             </div>
                    
                         </div>
@@ -92,21 +97,7 @@
                 <!-- Main Content Area: Occupies 8 columns on medium screens and up (col-md-8) -->
                 <div class="col-md-8">
 
-                    <!-- Work Experience Card -->
-                    <div class="card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Work Experience</h5>
-                            <h6>Revenue Analyst - Marriott Revenue Strategy</h6>
-                            <p class="text-muted mb-1">Qingdao, China | Aug 2021 - Dec 2024</p>
-                            <ul class="list-unstyled">
-                                <li>- Monitored Revenue Management System pricing outputs.</li>
-                                <li>- Identified data drift and applied Human-in-the-loop overrides.</li>
-                                <li>- Collected daily room rates and prepared segmented booking data.</li>
-                                <li>- Automated daily reporting workflow with <strong>Microsoft Power Automate</strong>.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
+
                     <!-- Projects Card -->
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
@@ -126,8 +117,8 @@
                                 <h6>Employee Management System Backend (Spring Boot)</h6>
                                 <p class="text-muted mb-1">Personal Project</p>
                                 <ul class="list-unstyled">
-                                        <li>- Built <strong>RESTful API</strong> with Spring Boot and Hibernate (CRUD operations). <a href="flexbox-projects.html#project-employee-api" class="text-decoration-none">View project</a></li>
-                                        <li>- Implemented <strong>layered architecture</strong> and Spring Data JPA.</li>
+                                        <li>- Built RESTful API with Spring Boot and Hibernate (CRUD operations). <a href="flexbox-projects.html#project-employee-api" class="text-decoration-none">View project</a></li>
+                                        <li>- Implemented layered architecture and Spring Data JPA.</li>
                                 </ul>
                             
                             <h6 class="mt-3">Database Management System for Sales (SQL)</h6>
@@ -138,6 +129,22 @@
                             </ul>
                         </div>
                     </div>
+
+                    <!-- Work Experience Card -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Work Experience</h5>
+                            <h6>Revenue Analyst - Marriott Revenue Strategy</h6>
+                            <p class="text-muted mb-1">Qingdao, China | Aug 2021 - Dec 2024</p>
+                            <ul class="list-unstyled">
+                                <li>- Monitored Revenue Management System pricing outputs.</li>
+                                <li>- Identified data drift and applied Human-in-the-loop overrides.</li>
+                                <li>- Collected daily room rates and prepared segmented booking data.</li>
+                                <li>- Automated daily reporting workflow with Microsoft Power Automate.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
 
                     <!-- Education Card -->
                     <div class="card border-0 shadow-sm mb-4">

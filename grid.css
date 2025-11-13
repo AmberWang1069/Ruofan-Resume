@@ -10,3 +10,74 @@
 .item-span-2-2 { grid-column: span 2; grid-row: span 2; }
 .item-span-1-2 { grid-row: span 2; }
 .item-span-2-1 { grid-column: span 2; }
+
+/* Conveyor gallery styles */
+.conveyor-gallery {
+  --belt-duration: 70s; /* slowed down per user: larger/slower */
+  --belt-gap: 0.75rem;
+  width: 100%;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.conveyor { overflow: hidden; width: 100%; }
+
+.belt {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--belt-gap);
+  will-change: transform;
+}
+
+.belt-img {
+  height: 220px; /* increased size per user request */
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 auto; /* avoid reflow during load */
+}
+
+/* Top belt: left → right; Bottom belt: right → left */
+.belt-right {
+  animation: belt-move-right var(--belt-duration) linear infinite;
+}
+.belt-left {
+  animation: belt-move-left var(--belt-duration) linear infinite;
+}
+
+/* Continuous scroll (we duplicate content, so move by 50%) */
+@keyframes belt-move-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+@keyframes belt-move-left {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Make the animation a bit slower on reduced-motion prefs */
+@media (prefers-reduced-motion: reduce) {
+	.conveyor-top .belt, .conveyor-bottom .belt { animation-duration: 0.001s !important; animation-play-state: paused !important; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .belt-img { height: 180px; }
+}
+@media (max-width: 1200px) {
+  .belt-img { height: 160px; }
+}
+@media (max-width: 900px) {
+  .belt-img { height: 140px; }
+}
+@media (max-width: 520px) {
+  .belt-img { height: 120px; }
+}
+
+/* Pause belts on hover for accessibility and user control */
+.conveyor:hover .belt { animation-play-state: paused; }
+
+/* Full-image overlay shown when hovering an image (JS will toggle .visible) */
+.img-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background: rgba(0,0,0,0.6); z-index:1200; opacity:0; pointer-events:none; transition:opacity .15s ease; }
+.img-overlay.visible { opacity:1; pointer-events:auto; }
+.img-overlay img { max-width:92vw; max-height:92vh; border-radius:10px; box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
+.img-overlay .close-hint { position:absolute; top:18px; right:20px; color:var(--color-text-muted); font-size:0.85rem; }

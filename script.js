@@ -30,3 +30,66 @@
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
+
+/* Gallery hover preview: pause belts and show full image overlay on hover */
+(function () {
+  function pauseBelts(paused) {
+    document.querySelectorAll('.conveyor .belt').forEach(b => {
+      b.style.animationPlayState = paused ? 'paused' : '';
+    });
+  }
+
+  function showOverlay(src, alt) {
+    let overlay = document.querySelector('.img-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'img-overlay';
+      overlay.innerHTML = '<div class="close-hint">Click to close</div>';
+      const img = document.createElement('img');
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+      overlay.addEventListener('click', () => {
+        overlay.classList.remove('visible');
+        setTimeout(() => overlay.remove(), 200);
+        pauseBelts(false);
+      });
+      document.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape' && document.querySelector('.img-overlay')) {
+          const o = document.querySelector('.img-overlay');
+          o.classList.remove('visible');
+          setTimeout(() => o.remove(), 200);
+          pauseBelts(false);
+        }
+      });
+    }
+    const imgEl = overlay.querySelector('img');
+    imgEl.src = src;
+    imgEl.alt = alt || '';
+    pauseBelts(true);
+    overlay.classList.add('visible');
+  }
+
+  function attach() {
+    const imgs = document.querySelectorAll('.belt-img');
+    imgs.forEach(img => {
+      // Make images keyboard-focusable and announceable as interactive
+      img.tabIndex = 0;
+      img.setAttribute('role', 'button');
+
+      // Use click/tap to open the overlay (no hover behavior)
+      img.addEventListener('click', (e) => {
+        showOverlay(img.src, img.alt);
+      });
+
+      // Support keyboard activation (Enter / Space)
+      img.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showOverlay(img.src, img.alt);
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', attach); else attach();
+})();

@@ -1,0 +1,12 @@
+{
+  "name": "ruofan-resume",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "generate-gallery": "node scripts/generate-gallery.js",
+    "watch-gallery": "node scripts/watch-gallery.js"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3"
+  }
+}
